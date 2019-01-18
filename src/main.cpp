@@ -18,5 +18,8 @@
 
 int main()
 {
+    if(int a = 12; a < 7){
+        return 15;
+    }
     return 0;
 }
