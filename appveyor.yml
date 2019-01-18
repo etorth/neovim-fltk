@@ -20,7 +20,7 @@ before_build:
         cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
         cmake --build . --target install
 
-build:
+build_script:
     - echo "Done"
 
 after_build:
