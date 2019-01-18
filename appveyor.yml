@@ -36,7 +36,7 @@ artifacts:
 deploy:
     provider: GitHub
     auth_token:
-        secure: 
+        secure: HHPH5otHDTeP2iU11PdRWnhpOMycDJ/n+NKC0xvSphvA4NLz41/rASWc1UseTQgU
     on:
         branch: master
         APPVEYOR_REPO_TAG: true
