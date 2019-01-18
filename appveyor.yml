@@ -23,12 +23,10 @@ build_script:
     - echo "Done"
 
 after_build:
-    - cmd: |-
-        cd %APPVEYOR_BUILD_FOLDER%\build
-        dir /s /b
+    - echo "Done"
 
 test_script:
-  - echo '%APPVEYOR_BUILD_FOLDER%\\%CONFIGURATION%\\tests.exe'
+    - echo "Done"
 
 artifacts:
     - path: build\*.zip
