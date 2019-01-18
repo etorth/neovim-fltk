@@ -31,5 +31,5 @@ after_build:
 test_script:
   - echo '%APPVEYOR_BUILD_FOLDER%\\%CONFIGURATION%\\tests.exe'
 
-artfacts:
+artifacts:
     - path: build/install
