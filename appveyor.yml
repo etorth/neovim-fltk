@@ -17,7 +17,7 @@ before_build:
         mkdir build
         cd build
         cmake --version
-        cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
+        cmake .. --install -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
 
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\build\NEOVIM_FLTK.sln
