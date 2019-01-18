@@ -16,7 +16,7 @@ before_build:
         mkdir build
         cd build
         cmake --version
-        cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
+        cmake .. -G "Visual Studio 15 2017 Win64"
         cmake --build . --target package --config Release
 
 build_script:
