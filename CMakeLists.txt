@@ -23,7 +23,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 ADD_SUBDIRECTORY(src)
 
 # create a reversion string to deploy
-# generate this length-20 string from ``git rev-parse HEAD"
+# generate this length-20 string by ``git rev-parse HEAD"
 SET(COMMAND_GIT_HEADREV git rev-parse HEAD)
 EXECUTE_PROCESS(
     COMMAND           ${COMMAND_GIT_HEADREV}
