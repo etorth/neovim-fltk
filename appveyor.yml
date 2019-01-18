@@ -17,7 +17,7 @@ before_build:
         cd build
         cmake --version
         cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install -DCMAKE_BUILD_TYPE=Release
-        cmake --build . --target install
+        cmake --build . --target package
 
 build_script:
     - echo "Done"
@@ -31,7 +31,7 @@ test_script:
   - echo '%APPVEYOR_BUILD_FOLDER%\\%CONFIGURATION%\\tests.exe'
 
 artifacts:
-    - path: build/install
+    - path: build/deploy
 
 deploy:
     provider: GitHub

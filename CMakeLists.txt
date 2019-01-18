@@ -14,7 +14,7 @@
 #
 #=======================================================================================
 
-PROJECT(NEOVIM_FLTK)
+PROJECT(neovim_fltk)
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
 SET(CMAKE_CXX_STANDARD 17)
@@ -22,6 +22,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ADD_SUBDIRECTORY(src)
 
-# SET(CPACK_GENERATOR "ZIP")
-# SET(CPACK_PACKAGE_NAME "neovim_fltk")
-# INCLUDE(CPack)
+INCLUDE(InstallRequiredSystemLibraries)
+SET(CPACK_PACKAGE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/deploy")
+SET(CPACK_GENERATOR "ZIP")
+INCLUDE(CPack)
