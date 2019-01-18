@@ -16,8 +16,13 @@
  * =====================================================================================
  */
 
+#include <cstdio>
+#include <cstdlib>
 int main()
 {
+    std::printf("hello here\n");
+    std::system("pause");
+
     if(int a = 12; a < 7){
         return 15;
     }
