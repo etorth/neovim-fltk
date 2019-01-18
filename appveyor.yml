@@ -20,6 +20,9 @@ before_build:
         cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
         cmake --build . --target install
 
+build:
+    - echo "Done"
+
 after_build:
     - cmd: |-
         cd %APPVEYOR_BUILD_FOLDER%\build
