@@ -1,4 +1,4 @@
-version: '1.0.{build}'
+version: '0.0.{build}'
 
 image: Visual Studio 2017
 
@@ -13,11 +13,15 @@ install:
     - git submodule update --init --recursive
 
 before_build:
-    - cmake -G "Visual Studio 15 2017 Win64" .
+    - cmd: |-
+        mkdir build
+        cd build
+        cmake --version
+        cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
 
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
 
 test_script:
-  - '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\tests.exe'
+  - echo '%APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\tests.exe'
 
