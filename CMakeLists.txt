@@ -23,6 +23,9 @@ SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 ADD_SUBDIRECTORY(src)
 
 INCLUDE(InstallRequiredSystemLibraries)
-SET(CPACK_PACKAGE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/deploy")
+
+# this works but I can't find it in the document...
+SET(CPACK_OUTPUT_FILE_PREFIX "deploy")
 SET(CPACK_GENERATOR "ZIP")
+
 INCLUDE(CPack)
