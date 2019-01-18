@@ -24,8 +24,7 @@ ADD_SUBDIRECTORY(src)
 
 INCLUDE(InstallRequiredSystemLibraries)
 
-# this works but I can't find it in the document...
-SET(CPACK_OUTPUT_FILE_PREFIX "deploy")
 SET(CPACK_GENERATOR "ZIP")
+SET(CPACK_PACKAGE_FILE_NAME "install")
 
 INCLUDE(CPack)
