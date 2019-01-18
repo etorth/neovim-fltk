@@ -16,7 +16,7 @@ before_build:
         mkdir build
         cd build
         cmake --version
-        cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install
+        cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=install -DCMAKE_BUILD_TYPE=Release
         cmake --build . --target install
 
 build_script:
@@ -38,5 +38,4 @@ deploy:
     auth_token:
         secure: HHPH5otHDTeP2iU11PdRWnhpOMycDJ/n+NKC0xvSphvA4NLz41/rASWc1UseTQgU
     on:
-        branch: master
         APPVEYOR_REPO_TAG: true
