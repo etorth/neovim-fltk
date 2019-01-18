@@ -7,7 +7,6 @@ platform:
  
 configuration:
   - Release
-  - Debug
 
 install:
     - echo "Done clone here"
@@ -32,3 +31,5 @@ after_build:
 test_script:
   - echo '%APPVEYOR_BUILD_FOLDER%\\%CONFIGURATION%\\tests.exe'
 
+artfacts:
+    - path: build/install
