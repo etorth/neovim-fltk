@@ -23,9 +23,8 @@ build:
   project: $(APPVEYOR_BUILD_FOLDER)\build\NEOVIM_FLTK.sln
 
 after_build:
-    - cd $(APPVEYOR_BUILD_FOLDER)\build
+    - cd '%APPVEYOR_BUILD_FOLDER%\build'
     - dir
-
 
 test_script:
   - echo '%APPVEYOR_BUILD_FOLDER%\\%CONFIGURATION%\\tests.exe'
