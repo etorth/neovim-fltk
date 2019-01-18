@@ -25,6 +25,4 @@ ADD_SUBDIRECTORY(src)
 INCLUDE(InstallRequiredSystemLibraries)
 
 SET(CPACK_GENERATOR "ZIP")
-SET(CPACK_PACKAGE_FILE_NAME "install")
-
 INCLUDE(CPack)
